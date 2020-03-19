@@ -25,7 +25,6 @@ def profile(func):
     """A function that can be used as a decorator to measure performance"""
 
 
-
 def read_movies(src):
     """Returns a list of movie titles"""
     print('Reading file: {}'.format(src))
@@ -51,7 +50,7 @@ def timeit_helper():
     t = timeit.Timer(functools.partial(find_duplicate_movies, 'movies.txt'))
     time_result = min(t.repeat(repeat=7, number=3)) / 3
     print("Best time across 7 repeats of 3 runs per repeat:",
-          time_result, "seconds")
+          time_result)
 
 
 def main():
